@@ -1,0 +1,13 @@
+[Unit]
+Description=Load wifi module
+After=wayland.service
+Conflicts=shutdown.target actdead.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/droid/wlan.sh
+
+
+[Install]
+WantedBy=multi-user.target
