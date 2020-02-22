@@ -1,6 +1,6 @@
 [Unit]
 Description=Load wifi module
-After=wayland.service
+After=droid-hal-init.service
 Conflicts=shutdown.target actdead.target
 
 [Service]
@@ -10,4 +10,4 @@ ExecStart=/usr/bin/droid/wlan.sh
 
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=network.target
